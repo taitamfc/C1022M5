@@ -9,8 +9,6 @@ const rules = Yup.object().shape({
   name: Yup.string().required('Truong yeu cau').min(3, 'Toi thieu 3 ky tu').max(255, 'Toi da 255'),
 });
 
-
-
 function UserAdd(props) {
   const navigate = useNavigate();
 
