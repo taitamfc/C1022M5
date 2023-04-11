@@ -23,12 +23,14 @@
 - Goi API xóa
 # UserAdd.js
 - Tạo form
+- Validate form
 - Tạo phương thức xử lý
 - Gọi API thêm
 - Chuyển hướng
 - Chuyển hướng về /
 # UserEdit
 - Tạo form
+- Validate form
 - Lấy tham số trên url
 - Gọi API lấy dữ liệu theo ID
 - Tạo phương thức xử lý
