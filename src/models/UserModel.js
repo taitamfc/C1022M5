@@ -2,7 +2,7 @@ import axios from "axios";
 
 class UserModel {
     constructor(){
-        this.api_url = 'https://6083df209b2bed00170404a0.mockapi.io/angular/users/';
+        this.api_url = 'https://6083df209b2bed00170404a0.mockapi.io/angular/users';
     }
     getAll(){
         return new Promise( (resolve, reject) => {
@@ -34,6 +34,19 @@ class UserModel {
         return new Promise( (resolve, reject) => {
             axios
             .post(this.api_url,data )
+            .then(res => {
+                resolve(res.data);
+            })
+            .catch(err => {
+                reject(err)
+            });
+        });
+    }
+    
+    update(id,data){
+        return new Promise( (resolve, reject) => {
+            axios
+            .put(this.api_url+'/'+id , data)
             .then(res => {
                 resolve(res.data);
             })
